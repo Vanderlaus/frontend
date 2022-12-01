@@ -1,45 +1,53 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <link rel="stylesheet" href="css/style.css">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <link rel="stylesheet" href="css/form.css"/>
+    <link rel="stylesheet" href="css/table.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cadastrar Funcionario</title>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <ul>
-            <li><a href="listar.html">Listar</a></li>
-            <li><a href="editar.html">Editar</a></li>
-            <li><a href="index.html">Inicio</a></li>
-        </ul>
+      <div id="logo">
+        <a href="index.html">
+            <img src="img/logo.jpg" alt="Logo">
+        </a>
+      </div>
+      <ul>
+        <li><a href="listar.html">Listar</a></li>
+        <li><a href="editar.html">Editar</a></li>
+        <li><a href="index.html">Inicio</a></li>
+      </ul>
     </header>
     <main>
-        <h2>Cadastrar Funcionario</h2>
-        <hr>
-        <form action="">
-            <div>
-                <input type="text" id="nome" placeholder="Nome">
-            </div>
-            <br>
-            <div>
-                <input type="text" id="cargo" placeholder="Cargo">
-            </div>
-            <br>
-            <div>
-                <input type="text" id="salario" placeholder="Salário">
-            </div>
-            <br>
-            <div>
-                <button>Salvar</button>
-                <button>Limpar</button>
-            </div>
-            <br>
-        </form>
+      <h1>Cadastrar Funcionário</h1>
+      <hr />
+      <form action="">
+        <div>
+          <input type="text" class="campos" id="nome" placeholder="Nome">
+        </div>
+        <br />
+        <div>
+          <input type="text" class="campos" id="cargo" placeholder="Cargo">
+        </div>
+        <br />
+        <div>
+          <input type="text" class="campos" id="salario" placeholder="Salário">
+        </div>
+        <br />
+        <div>
+          <input class= "botoes salvar" type="submit" value="Salvar">
+          <button class= "botoes cancelar" >Limpar</button>
+        </div>
+        <br />
+      </form>
+      <hr>
     </main>
     <footer>
-        <span>Desenvolvido por Vander Luis Lauschner</span>        
+      <span>Desenvolvido por Vander Luis Lauschner</span>
     </footer>
-</body>
+  </body>
 </html>
