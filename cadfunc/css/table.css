@@ -1,0 +1,22 @@
+#funcionarios{
+    width: 80%;
+    margin: auto;
+    border: 2px orange solid;
+    border-collapse: collapse;
+    text-align: center;
+    color: orange;
+}
+#funcionarios thead{
+    background: orange ;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+#funcionarios thead tr th{
+    padding: 6px 10px;
+    color: black;
+}
+
+#funcionarios tbody tr th{
+    padding: 8px 10px;
+}
