@@ -4,7 +4,7 @@
     border: 2px orange solid;
     border-collapse: collapse;
     text-align: center;
-    color: black;
+    color: orange;
 }
 #funcionarios thead{
     background: orange ;
@@ -19,5 +19,4 @@
 
 #funcionarios tbody tr th{
     padding: 8px 10px;
-    color: black;
 }

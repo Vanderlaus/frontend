@@ -7,7 +7,7 @@ body, div, header, main{
 
 body{
     color: orange;
-    background: white;
+    background: black;
 }
 
 #logo img{
@@ -16,7 +16,7 @@ body{
 }
 
 #imagem img{
-    width: 40%;
+    width: 60%;
     border-radius: 10px;
     border: 1px solid #fff;
 }
