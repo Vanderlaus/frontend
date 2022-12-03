@@ -26,16 +26,31 @@ function salvar(event){
     
     var name = document.getElementsByName('nome')[0].value;
     var ocupation = document.getElementsByName('cargo')[0].value;
-    var income = document.getElementsByName('salario')[0].value;
+    var salary = document.getElementsByName('salario')[0].value;
+
+    var listaFuncionario = JSON.parse(localStorage.getItem('Funcionario'));
+
+    if(listaFuncionario == null){
+        listaFuncionario = []
+    }
+    var id = JSON.parse(localStorage.getItem('idFuncionario'));
+    if(listaFuncionario == null){
+        id = 0;
+    }
+    id = id +1;
 
     var Funcionario = {
+                    'id': id,
                     'nome': name,
                     'cargo': ocupation,
-                    'salario': income
-                }
+                    'salario': salary
+                };listaFuncionario.push(Funcionario);
+
     console.log(Funcionario)
 
-    localStorage.setItem('Funcionario', JSON.stringify(Funcionario));
+    localStorage.setItem('idFuncionario', JSON.stringify(id));
+    localStorage.setItem('Funcionario', JSON.stringify(listaFuncionario));
+    limpar(event)
 }
 
 document.getElementById('salvar').addEventListener('click', salvar)
