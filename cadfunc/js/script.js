@@ -34,6 +34,8 @@ function salvar(event){
                     'salario': income
                 }
     console.log(Funcionario)
+
+    localStorage.setItem('Funcionario', JSON.stringify(Funcionario));
 }
 
 document.getElementById('salvar').addEventListener('click', salvar)
