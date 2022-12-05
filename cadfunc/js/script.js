@@ -1,13 +1,13 @@
 //criei uma variavel chamada elemento 
 //document acessa o documento html que esta sendo chamado o script
 //query selector e um methodo interno do javaScript que nos retorna um elemento html 
-var elemento = document.querySelector('h1')
+// var elemento = document.querySelector('h1')
 //variavel recebendo inner html para incremento ou alteracao descrtivo
-elemento.innerHTML += ' JS';
+// elemento.innerHTML += ' JS';
 //variavel elemento recebendo estilizacao de cor 
-elemento.style.color = '#00f';
+// elemento.style.color = '#00f';
 //console log e o nosso print retorno variavel
-console.log(elemento);
+// console.log(elemento);
 
 //criei uma variavel chamada limpar
 function limpar(event){
