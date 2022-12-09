@@ -1,0 +1,16 @@
+body{
+    background: pink !important;
+}
+
+footer{
+    text-align: center;
+    background-color: pink;
+    margin-top: 20px;
+    font-style: italic;
+}
+
+header{
+    background-color: pink;
+    font-weight: 700;
+    font-style: italic;
+}
