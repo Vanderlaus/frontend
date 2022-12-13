@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <link
       rel="stylesheet"
@@ -14,22 +14,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MoreDevs</title>
+    <title>Moredevs</title>
   </head>
-  <header>
-    <nav class="nav nav-pills">
-      <li class="nav-item">
-        <a class="nav-link" href="/">Listar</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/novo">Cadastrar</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/logout">Sair</a>
-      </li>
-    </nav>
-  </header>
   <body>
+    <header></header>
     <div class="container">
       <!-- trecho de codigo python, alerta e informaçoe para o usuario -->
       {% with messages = get_flashed_messages() %} {% if messages %}
@@ -39,11 +27,30 @@
         {% endfor %}
       </ul>
       {% endif %} {% endwith %}
+
       <div class="page-header">
         <h1>{{ titulo }}</h1>
       </div>
-      <div>{% block conteudo %} {% endblock %}</div>
+
+      <form action="/autenticar" method="post">
+          
+        <input type="hidden" name="proximo" value="{{ proximo or url_for('index') }}">
+
+        <p>
+          <label>Nome Usuario</label>
+          <input class="form-control" type="text" name="usuario" required />
+        </p>
+        <p>
+          <label>Senha</label>
+          <input class="form-control" type="password" name="senha" required />
+        </p>
+
+        <p>
+          <button class="btn btn-primary" type="submit">Login</button>
+        </p>
+      </form>
     </div>
+    <footer></footer>
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
       integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -60,7 +67,4 @@
       crossorigin="anonymous"
     ></script>
   </body>
-  <footer>
-    <h4>Desenvolvido por Vander Luis Lauschner</h4>
-  </footer>
 </html>
