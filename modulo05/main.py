@@ -66,10 +66,8 @@ def autenticar():
     if request.form['usuario'] in usuarios:
 
         usuario = usuarios[request.form['usuario']]
-        
         if request.form['senha'] == usuario.senha:
             session['usuario_logado'] = usuario.nickname
-            
             flash(usuario.nickname + ' Deu Boa')
             proxima_pagina = request.form['proximo']
             return redirect(proxima_pagina)
