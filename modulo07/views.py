@@ -4,6 +4,9 @@ from models import Pessoa, Usuarios
 
 @app.route('/')
 def index():
+    if 'usuario_logado' not in session or session['usuario_logado'] is None:
+        #recurso querystring
+        return redirect(url_for('login'))
     lista = Pessoa.query.order_by(Pessoa.id)
     #render template acessa nosso html, variavel titulo recebendo valor e sendo acessada via html.
     return render_template("lista.html", titulo = 'Lista de Pessoas', pessoas = lista)
