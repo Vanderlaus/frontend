@@ -98,7 +98,7 @@ def autenticar():
             session['usuario_logado'] = usuario.nickname
             
 
-            flash(usuario.nickname + ' logado com sucesso')
+            flash(usuario.nickname + ' - Logado com sucesso')
 
             proxima_pagina = request.form['proximo']
 
