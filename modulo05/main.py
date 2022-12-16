@@ -31,7 +31,7 @@ def inicio():
 
         return redirect(url_for('login', proximo= url_for('novo')))
     
-    return render_template('index.html', titulo = 'Lista Pessoas', pessoas = lista)
+    return render_template('index.html', titulo = 'Lista de Pessoas', pessoas = lista)
 
 @app.route('/novo')
 def novo():
